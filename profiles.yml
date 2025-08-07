@@ -1,0 +1,12 @@
+default:
+      target: staging # Default target for this profile
+      outputs:
+        staging:
+          #type: [your_data_warehouse_type] # e.g., snowflake, bigquery, postgres
+          database: staging
+          schema: bikes #your_dev_schema_1
+          # ... other connection details (user, password, host, etc.)
+        presentation:
+          #type: [your_data_warehouse_type]
+          database: presentation
+          schema: bikes #your_dev_schema_2
