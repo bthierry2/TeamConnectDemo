@@ -1,12 +1,30 @@
-default:
-      target: staging # Default target for this profile
+TCDemoProject:
+      target: dev # Default target for this profile
       outputs:
-        staging:
-          #type: [your_data_warehouse_type] # e.g., snowflake, bigquery, postgres
+        dev:
+          type: snowflake
+          account: NUDLAMS-FFA15602
+          user: bnthierry2
+          password: Rwanda@2016
+          role: ACCOUNTADMIN
+          warehouse: COMPUTE_WH
           database: staging
-          schema: bikes #your_dev_schema_1
+          schema: bikes
+
+          #type: [your_data_warehouse_type] # e.g., snowflake, bigquery, postgres
+          #database: staging
+          #schema: bikes #your_dev_schema_1
           # ... other connection details (user, password, host, etc.)
-        presentation:
+        prod:
+          type: snowflake
+          account: NUDLAMS-FFA15602
+          user: bnthierry2
+          password: Rwanda@2016
+          role: ACCOUNTADMIN
+          warehouse: COMPUTE_WH
+          database: staging
+          schema: bikes
+
           #type: [your_data_warehouse_type]
-          database: presentation
-          schema: bikes #your_dev_schema_2
+          #database: presentation
+          #schema: bikes #your_dev_schema_2
