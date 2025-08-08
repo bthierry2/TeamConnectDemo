@@ -45,8 +45,10 @@ models:
     staging:
       database: staging
       schema: bikes 
+      +materialized: table
        
     presentation:
       database: presentation
       schema: bikes 
+      +materialized: table
    
