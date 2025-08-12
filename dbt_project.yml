@@ -43,12 +43,12 @@ models:
       +materialized: table
 
     staging:
-      +database: "{{ 'staging' if target.name == 'dev' else 'pr_staging'}}"
+      +database: "{{ 'staging' if target.name == 'stag_dev' else 'pr_staging'}}"
       +schema: bikes 
       +materialized: table
        
     presentation:
-      +database: "{{ 'presentation' if target.name == 'dev' else 'pr_presentation'}}"
+      +database: "{{ 'presentation' if target.name == 'pres_stag' else 'pr_presentation'}}"
       +schema: bikes 
       +materialized: table
    

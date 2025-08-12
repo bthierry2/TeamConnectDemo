@@ -1,7 +1,7 @@
 TCDemoProject:
-      target: dev # Default target for this profile
+      target: stag_dev # Default target for this profile
       outputs:
-        dev:
+        stag_dev:
           type: snowflake
           account: NUDLAMS-FFA15602
           user: bnthierry2
@@ -11,18 +11,40 @@ TCDemoProject:
           database: staging
           schema: bikes
 
-          #type: [your_data_warehouse_type] # e.g., snowflake, bigquery, postgres
-          #database: staging
-          #schema: bikes #your_dev_schema_1
-          # ... other connection details (user, password, host, etc.)
-        prod:
+        pres_dev:
           type: snowflake
           account: NUDLAMS-FFA15602
           user: bnthierry2
           password: Rwanda@2016
           role: ACCOUNTADMIN
           warehouse: COMPUTE_WH
-          database: staging
+          database: presentation
+          schema: bikes
+      
+          #schema: bikes
+
+          #type: [your_data_warehouse_type] # e.g., snowflake, bigquery, postgres
+          #database: staging
+          #schema: bikes #your_dev_schema_1
+          # ... other connection details (user, password, host, etc.)
+        stag_prod:
+          type: snowflake
+          account: NUDLAMS-FFA15602
+          user: bnthierry2
+          password: Rwanda@2016
+          role: ACCOUNTADMIN
+          warehouse: COMPUTE_WH
+          database: pr_staging
+          schema: bikes
+
+        pres_prod:
+          type: snowflake
+          account: NUDLAMS-FFA15602
+          user: bnthierry2
+          password: Rwanda@2016
+          role: ACCOUNTADMIN
+          warehouse: COMPUTE_WH
+          database: pr_staging
           schema: bikes
 
           #type: [your_data_warehouse_type]
