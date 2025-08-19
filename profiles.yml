@@ -1,5 +1,5 @@
-user:
-       # Default target for this profile
+TCDemoProject:
+  target: dev     # Default target for this profile
   outputs:
     dev:
       type: snowflake
@@ -23,32 +23,8 @@ user:
       schema: bikes
       threads: 4
 
-  target: dev
-  
-TCDemo:
-      target: dev # Default target for this profile
-      outputs:
-        dev:
-          type: snowflake
-          account: NUDLAMS-FFA15602
-          user: bnthierry2
-          password: Rwanda@2016
-          role: ACCOUNTADMIN
-          warehouse: COMPUTE_WH
-          database: staging
-          schema: bikes
-          threads: 4
 
-        prod:
-          type: snowflake
-          account: NUDLAMS-FFA15602
-          user: bnthierry2
-          password: Rwanda@2016
-          role: ACCOUNTADMIN
-          warehouse: COMPUTE_WH
-          database: pr_staging
-          schema: bikes
-          threads: 4
+
       
           #schema: bikes
 

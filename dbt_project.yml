@@ -7,7 +7,7 @@ version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'user'
+profile: TCDemoProject
 
 
 # These configurations specify where dbt should look for different types of files.
@@ -48,7 +48,7 @@ models:
       +materialized: table
        
     presentation:
-      +database: "{{ 'presentation' if target.name == 'pres_dev' else 'pr_presentation'}}"
+      +database: "{{ 'presentation' if target.name == 'dev' else 'pr_presentation'}}"
       +schema: bikes 
       +materialized: table
    
