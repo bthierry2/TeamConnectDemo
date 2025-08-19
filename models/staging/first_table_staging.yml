@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: first_table
+    columns:
+      - name: column_name
+        tests:
+          - unique
+          - not_null
+
+  - name: first_table_next
+    columns:
+      - name: column_name
+        tests:
+          - unique
+          
+          
