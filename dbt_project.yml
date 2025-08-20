@@ -1,14 +1,13 @@
 
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
-# name or the intended use of these models
+# name or the intended use of these models 
 name: 'TCDemoProject'
 version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
 profile: TCDemoProject
-
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -24,7 +23,6 @@ target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
-
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -43,12 +41,12 @@ models:
       +materialized: table
 
     staging:
-      +database: "{{ 'staging' if target.name == 'dev' else 'pr_staging'}}"
+      +database: "{{ 'staging' if env_var('DBT_ENV_TYPE') == 'Dev' else 'pr_staging'}}"
       +schema: bikes 
       +materialized: table
        
     presentation:
-      +database: "{{ 'presentation' if target.name == 'dev' else 'pr_presentation'}}"
+      +database: "{{ 'presentation' if env_var('DBT_ENV_TYPE') else 'pr_presentation'}}"
       +schema: bikes 
       +materialized: table
    
