@@ -41,12 +41,13 @@ models:
       +materialized: table
 
     staging:
-      +database: "{{ 'staging' if env_var('DBT_ENV_TYPE') == 'Dev' else 'pr_staging'}}"
+      +database: "{{ env_var('DBT_STAGING_DB')}}" 
       +schema: bikes 
       +materialized: table
        
     presentation:
-      +database: "{{ 'presentation' if env_var('DBT_ENV_TYPE') else 'pr_presentation'}}"
+      +database: "{{ env_var('DBT_PRESENTATION_DB')}}" #"{{ 'presentation' if env_var('DBT_ENV_TYPE') else 'pr_presentation'}}"
       +schema: bikes 
       +materialized: table
    
+## if env_var('DBT_ENV_TYPE') == 'Dev' else 'pr_staging'}}

@@ -11,7 +11,7 @@ cte4 as
 (select 879 as another), 
 
 cte5 as
-(select 190 as another)
+(select 195 as another)
 
 select * from cte
 union
@@ -20,5 +20,5 @@ union
 select * from cte3  
 union
 select * from cte4
-union
+union 
 select * from cte5
