@@ -19,6 +19,4 @@ select * from cte2
 union
 select * from cte3  
 union
-select * from cte4
-union 
-select * from cte5
+select * from cte4 
