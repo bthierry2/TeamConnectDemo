@@ -1,0 +1,14 @@
+version: "1"
+context:
+  active-host: "fp930.us1.dbt.com"
+  active-project: "70471823488165"
+projects:
+  - project-name: "TC_CORP_LEGAL"
+    project-id: "70471823488165"
+    account-name: "GE"
+    account-id: "70471823477791"
+    account-host: "fp930.us1.dbt.com"
+    token-name: "cloud-cli-afbc"
+    token-value: "dbtu_vB1ZflAFLUbi4LoLx9wB0BNHBpq6GsKcHljhgAYwWa1v36SLo0"
+
+
